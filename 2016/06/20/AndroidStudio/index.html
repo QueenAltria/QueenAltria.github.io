@@ -16,7 +16,7 @@ Android Studio 是Google在intellj idea的基础上对android开发进行量身�
 <meta property="og:description" content="为什么使用Android Studio
 Android Studio 是Google在intellj idea的基础上对android开发进行量身定制的一款免费IDE，自从studio推出正式版本之后，android官网已经不在提供eclipse的下载，仅仅只提供ADT插件，google的重心已经转移到了studio。
 目前国外开发人员基本都已经转移到使用android studio开发了，git">
-<meta property="og:updated_time" content="2016-06-20T11:54:32.098Z">
+<meta property="og:updated_time" content="2016-06-20T12:12:13.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AndroidStudio">
 <meta name="twitter:description" content="为什么使用Android Studio
@@ -77,7 +77,7 @@ Android Studio 是Google在intellj idea的基础上对android开发进行量身�
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -221,6 +221,8 @@ Android Studio 是Google在intellj idea的基础上对android开发进行量身�
 <li>第一次创建android项目，会自动下载gradle，建议使用vpn连接下载，或者拷贝一个已经下好的gradle。下载gradle需要注意找到对应的版本，需要什么版本可以进入创建的工程中找到<strong>gradle\wrapper</strong>下的<strong>gradle-wrapper.properties</strong>文件，里面会有详细的下载地址，下载后的文件是一个zip包，不要解压。</li>
 </ul>
 <h3 id="Gradle学习"><a href="#Gradle学习" class="headerlink" title="Gradle学习"></a>Gradle学习</h3><p>android studio采用gradle进行项目构建，使用android studio就不得不花时间来学习gradle。build.gradle就是gradle的配置文件<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">buildscript</span> &#123; <span class="comment">//配置了驱动构建过程的代码</span></span><br><span class="line">	<span class="keyword">repositories</span> &#123; <span class="comment">//声明中央仓库</span></span><br><span class="line">		jcenter()</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">dependencies</span> &#123; <span class="comment">//声明了中央仓库中的依赖文件路径</span></span><br><span class="line">		<span class="keyword">classpath</span> <span class="string">'com.android.tools.build:gradle:1.0.0'</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">allprojects</span> &#123; <span class="comment">// 指明了所有项目都采用该中央仓库</span></span><br><span class="line">	<span class="keyword">repositories</span> &#123;</span><br><span class="line">		jcenter()</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>###jar和aar<br>jar是java程序常用的类，aar也是一种类库，它们 唯一的区别是jar不能包含资源文件，而aar可以包含资源文件。如果你只是一个简单的类库那么使用生成的jar文件即可；如果你的是一个UI库，包含一些自己写的控件布局文件以及字体等资源文件那么就只能使用aar文件。</p>
+<p>####生成aar的步骤：<br>使用android studio创建一个Android Library，然后编译就会生成对应的jar和aar。jar所在的目录为：<strong>moudle目录/build/intermediates/bundles/debug(release)/classes.jar</strong><br>aar：<strong>moudle目录/build/outputs/aar/libraryname.aar</strong></p>
 
       
     </div>
