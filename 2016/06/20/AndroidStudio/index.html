@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Android Studio 是Google在intellj idea的基础上对android开发进行量身定制的一款免费IDE，自从studio推出正式版本之后，android官网已经不在提供eclipse的下载，仅仅只提供ADT插件，google的重心已经转移到了studio。
 目前国外开发人员基本都已经转移到使用android studio开发了，github上的开源项目和依赖库基本都是采用">
-<meta property="og:updated_time" content="2016-06-20T11:19:36.269Z">
+<meta property="og:updated_time" content="2016-06-20T11:24:32.487Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AndroidStudio">
 <meta name="twitter:description" content="Android Studio 是Google在intellj idea的基础上对android开发进行量身定制的一款免费IDE，自从studio推出正式版本之后，android官网已经不在提供eclipse的下载，仅仅只提供ADT插件，google的重心已经转移到了studio。
@@ -213,7 +213,9 @@
 </ul>
 <h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><ul>
 <li>安装后如果提示找不到JVM，则需要配置JAVA_HOME的环境变量。</li>
-<li>第一次启动AS会检测SDK，并对SDK进行更新，可以通过配置文件跳过此步，进入Android Studio目录下的bin目录，找到[idea.properties]文件，用文本编辑器打开，在文件末尾添加一行：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[disable.android.first.run=true];</span><br></pre></td></tr></table></figure></li>
+<li>第一次启动AS会检测SDK，并对SDK进行更新，可以通过配置文件跳过此步，进入Android Studio目录下的bin目录，找到<strong>idea.properties</strong>文件，用文本编辑器打开，在文件末尾添加一行：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[disable.android.first.run=true];</span><br></pre></td></tr></table></figure>
+然后保存文件。重新启动Android Studio。</li>
+<li>第一次创建android项目，会自动下载gradle，建议使用vpn连接下载，或者拷贝一个已经下好的gradle。下载gradle需要注意找到对应的版本，需要什么版本可以进入创建的<br>工程中找到 gradle\wrapper 下的 gradle-wrapper.properties 文件，里面会有详<br>细的下载地址，例如： https\://services.gradle.org/distributions/gradle-<br>2.2.1-all.zip ，我们可以通过下载工具进行下载，下载后的文件是一个zip包，不要解压，直接拷贝到C:\Users\用户名.gradle\wrapper\dists\gradle-2.2-bin\ca0flae0itb57he40lyj6fhpp目录下，注意ca0flae0itb57he40lyj6fhpp目录是一个随机目录。然后重新开启AndroidStudio或者使用工具栏上的Sync Project Gradle Files即可。</li>
 </ul>
 
       
